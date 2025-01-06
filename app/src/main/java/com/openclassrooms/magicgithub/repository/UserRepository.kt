@@ -1,20 +1,20 @@
-// UserRepository.kt
 package com.openclassrooms.magicgithub.repository
 
-import com.openclassrooms.magicgithub.api.FakeApiService
+import com.openclassrooms.magicgithub.api.ApiService
 import com.openclassrooms.magicgithub.model.User
 
-class UserRepository(private val apiService: FakeApiService) {
-
+class UserRepository(
+    private val apiService: ApiService
+) {
     fun getUsers(): List<User> {
-        return apiService.getUsers()
+        TODO("Should return the list of users retrieved from the api service")
     }
 
     fun addRandomUser() {
-        apiService.addRandomUser()
+        TODO("Should add a random user")
     }
 
     fun deleteUser(user: User) {
-        apiService.deleteUser(user)
+        TODO("Should remove the user")
     }
 }
