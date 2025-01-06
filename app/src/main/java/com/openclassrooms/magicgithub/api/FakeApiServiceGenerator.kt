@@ -1,3 +1,4 @@
+// FakeApiServiceGenerator.kt
 package com.openclassrooms.magicgithub.api
 
 import com.openclassrooms.magicgithub.model.User
@@ -30,11 +31,15 @@ object FakeApiServiceGenerator {
     )
 
     @JvmField
-    var FAKE_USERS_RANDOM = Arrays.asList(
+    var FAKE_USERS_RANDOM = listOf(
         User("021", "Lea", "https://api.adorable.io/AVATARS/512/21.png"),
         User("022", "Geoffrey", "https://api.adorable.io/AVATARS/512/22.png"),
         User("023", "Simon", "https://api.adorable.io/AVATARS/512/23.png"),
         User("024", "André", "https://api.adorable.io/AVATARS/512/24.png"),
         User("025", "Leopold", "https://api.adorable.io/AVATARS/512/25.png")
     )
+
+    fun generateRandomUser(): User {
+        return FAKE_USERS_RANDOM.random()
+    }
 }
