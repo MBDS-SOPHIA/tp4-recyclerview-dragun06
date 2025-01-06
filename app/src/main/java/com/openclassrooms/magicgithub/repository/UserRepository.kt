@@ -16,4 +16,8 @@ class UserRepository(private val apiService: ApiService) {
     fun deleteUser(user: User) {
         apiService.deleteUser(user)
     }
+
+    fun updateUserState(user: User) {
+        apiService.updateUserState(user)
+    }
 }

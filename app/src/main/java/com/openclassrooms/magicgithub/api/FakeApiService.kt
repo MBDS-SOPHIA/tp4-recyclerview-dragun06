@@ -19,4 +19,10 @@ class FakeApiService : ApiService {
     override fun deleteUser(user: User) {
         _users.remove(user)
     }
+
+    override fun updateUserState(user: User) {
+        _users.find { it.id == user.id }?.let { foundUser ->
+            foundUser.isActive = user.isActive
+        }
+    }
 }
